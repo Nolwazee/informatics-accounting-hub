@@ -9,100 +9,147 @@ export interface Department {
 
 export const departments: Department[] = [
   {
-    id: "accounting",
-    name: "Department of Accounting",
-    description: "The Department of Accounting equips students with comprehensive knowledge in financial reporting, auditing, taxation, and management accounting. Our programs blend theoretical foundations with practical applications, preparing graduates for professional accounting careers and advanced research.",
+    id: "auditing-taxation",
+    name: "Auditing and Taxation",
+    description: "The Auditing and Taxation department focuses on developing expertise in auditing standards, internal controls, tax legislation, and compliance. Students gain practical skills in financial statement auditing, tax planning, and advisory services for individuals and organizations.",
     programmes: [
-      "Bachelor of Commerce in Accounting",
+      "Bachelor of Commerce in Auditing",
+      "Bachelor of Commerce in Taxation",
+      "Postgraduate Diploma in Auditing",
+      "Honours in Taxation",
+      "Master of Commerce in Auditing"
+    ],
+    researchAreas: [
+      "Audit Quality and Independence",
+      "Tax Compliance and Planning",
+      "Internal Audit and Risk Management",
+      "Forensic Auditing",
+      "International Tax Standards"
+    ],
+    notableProjects: [
+      "Audit Technology Implementation Study",
+      "Tax Evasion Detection Systems",
+      "Corporate Tax Optimization Framework"
+    ]
+  },
+  {
+    id: "finance-info-management",
+    name: "Finance and Information Management",
+    description: "This department integrates financial management principles with information systems to prepare students for careers in financial analysis, investment management, and financial information systems. The curriculum emphasizes data-driven financial decision-making and technology-enabled financial services.",
+    programmes: [
+      "Bachelor of Commerce in Finance",
+      "Bachelor of Commerce in Financial Information Systems",
+      "Honours in Finance",
+      "Master of Finance",
+      "Postgraduate Diploma in Financial Management"
+    ],
+    researchAreas: [
+      "Financial Markets and Instruments",
+      "Investment Analysis and Portfolio Management",
+      "Financial Risk Management",
+      "FinTech and Digital Banking",
+      "Corporate Finance and Valuation"
+    ],
+    notableProjects: [
+      "Algorithmic Trading Platform Development",
+      "Cryptocurrency Market Analysis",
+      "Financial Risk Assessment Models"
+    ]
+  },
+  {
+    id: "financial-accounting",
+    name: "Financial Accounting",
+    description: "The Financial Accounting department provides comprehensive training in accounting principles, financial reporting standards, and corporate financial management. Students develop expertise in preparing and analyzing financial statements, understanding accounting regulations, and applying international financial reporting standards.",
+    programmes: [
+      "Bachelor of Commerce in Financial Accounting",
       "Bachelor of Accounting Science",
-      "Honours in Accounting",
+      "Honours in Financial Accounting",
       "Master of Commerce in Accounting",
-      "PhD in Accounting"
+      "Chartered Accountant (CA) Preparatory Programme"
     ],
     researchAreas: [
-      "Financial Reporting and Disclosure",
-      "Corporate Governance",
-      "Auditing and Assurance",
-      "Tax Policy and Planning",
-      "Sustainability Accounting"
+      "IFRS and Financial Reporting",
+      "Earnings Management",
+      "Financial Statement Analysis",
+      "Corporate Financial Disclosure",
+      "Accounting for Complex Transactions"
     ],
     notableProjects: [
-      "IFRS Adoption Impact Study",
-      "Integrated Reporting Framework",
-      "AI in Financial Auditing"
+      "IFRS Implementation Impact Assessment",
+      "Fair Value Accounting Research",
+      "Integrated Reporting Systems"
     ]
   },
   {
-    id: "informatics",
-    name: "Department of Informatics",
-    description: "The Department of Informatics focuses on computer science, software engineering, and information systems. We cultivate technical expertise and problem-solving skills, preparing students to design, develop, and manage innovative technological solutions in a rapidly evolving digital landscape.",
+    id: "info-corporate-management",
+    name: "Information and Corporate Management",
+    description: "This department bridges information technology and corporate management, focusing on strategic management, organizational behavior, and information systems for decision-making. Students learn to leverage technology for organizational effectiveness and strategic advantage.",
     programmes: [
-      "Bachelor of Science in Computer Science",
-      "Bachelor of Science in Software Engineering",
-      "Bachelor of Science in Information Systems",
-      "Honours in Computer Science",
-      "Master of Science in Informatics",
-      "PhD in Computer Science"
+      "Bachelor of Commerce in Corporate Management",
+      "Bachelor of Business Administration",
+      "Honours in Business Management",
+      "Master of Business Administration (MBA)",
+      "Postgraduate Diploma in Management"
     ],
     researchAreas: [
-      "Artificial Intelligence and Machine Learning",
-      "Cybersecurity and Privacy",
-      "Data Science and Analytics",
-      "Cloud Computing and Distributed Systems",
-      "Human-Computer Interaction"
+      "Strategic Information Systems",
+      "Corporate Governance and Ethics",
+      "Organizational Change Management",
+      "Business Process Optimization",
+      "Digital Transformation Strategies"
     ],
     notableProjects: [
-      "Smart City IoT Platform",
-      "Healthcare Predictive Analytics System",
-      "Blockchain for Supply Chain Management"
+      "Corporate Governance Framework Study",
+      "Digital Transformation Roadmap for Enterprises",
+      "Management Information Systems Implementation"
     ]
   },
   {
-    id: "business-information",
-    name: "Department of Business Information Systems",
-    description: "The Department of Business Information Systems bridges business strategy and technology, focusing on enterprise systems, business analytics, and digital transformation. Our graduates are equipped to align IT solutions with organizational goals and drive competitive advantage through technology.",
+    id: "information-technology",
+    name: "Information Technology",
+    description: "The Information Technology department offers comprehensive training in software development, network administration, database management, and emerging technologies. Students gain hands-on experience in designing, implementing, and maintaining IT infrastructure and applications for modern organizations.",
     programmes: [
-      "Bachelor of Commerce in Business Information Systems",
-      "Bachelor of Business Administration in IT Management",
-      "Honours in Business Information Systems",
-      "Master of Business Administration (IT specialization)",
-      "PhD in Business Information Systems"
+      "Bachelor of Science in Information Technology",
+      "Bachelor of Science in Software Development",
+      "National Diploma in IT",
+      "Honours in Information Technology",
+      "Master of Science in Information Technology"
     ],
     researchAreas: [
-      "Enterprise Resource Planning (ERP)",
-      "Business Process Management",
-      "E-Commerce and Digital Marketing",
-      "Business Intelligence and Analytics",
-      "IT Governance and Strategy"
+      "Cloud Computing and Virtualization",
+      "Cybersecurity and Network Defense",
+      "Mobile and Web Application Development",
+      "Internet of Things (IoT)",
+      "Artificial Intelligence and Machine Learning"
     ],
     notableProjects: [
-      "Digital Transformation Framework for SMEs",
-      "ERP Implementation Success Factors Study",
-      "Customer Analytics Dashboard for Retail"
+      "Smart Campus IoT Infrastructure",
+      "Cybersecurity Threat Detection System",
+      "AI-Powered Student Support Chatbot"
     ]
   },
   {
-    id: "data-science",
-    name: "Department of Data Science and Analytics",
-    description: "The Department of Data Science and Analytics specializes in extracting insights from complex datasets using statistical methods, machine learning, and visualization techniques. We prepare students to become data-driven decision-makers and analysts who can tackle real-world challenges across industries.",
+    id: "management-accounting",
+    name: "Management Accounting",
+    description: "The Management Accounting department focuses on providing financial information for internal decision-making, strategic planning, and performance management. Students learn cost accounting, budgeting, performance measurement, and strategic management accounting techniques essential for organizational success.",
     programmes: [
-      "Bachelor of Science in Data Science",
-      "Bachelor of Science in Business Analytics",
-      "Honours in Data Science",
-      "Master of Science in Data Analytics",
-      "PhD in Data Science"
+      "Bachelor of Commerce in Management Accounting",
+      "Postgraduate Diploma in Management Accounting",
+      "Honours in Management Accounting",
+      "Master of Commerce in Management Accounting",
+      "CIMA Professional Qualification"
     ],
     researchAreas: [
-      "Big Data Technologies",
-      "Predictive Modeling and Forecasting",
-      "Natural Language Processing",
-      "Data Visualization and Storytelling",
-      "Ethical AI and Algorithmic Fairness"
+      "Cost Management and Control",
+      "Performance Measurement Systems",
+      "Strategic Management Accounting",
+      "Activity-Based Costing",
+      "Sustainability Management Accounting"
     ],
     notableProjects: [
-      "Social Media Sentiment Analysis Platform",
-      "Financial Market Prediction Models",
-      "Healthcare Outcome Prediction System"
+      "Balanced Scorecard Implementation Study",
+      "Cost Optimization Framework for Manufacturing",
+      "Performance Dashboard Development"
     ]
   }
 ];
