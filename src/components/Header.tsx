@@ -16,15 +16,15 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <nav className="container-custom px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-xl">F</span>
+        <div className="flex items-center gap-3">
+          <div className="w-11 h-11 bg-primary rounded flex items-center justify-center shadow-md">
+            <span className="text-primary-foreground font-bold text-2xl">F</span>
           </div>
           <div>
-            <h1 className="text-lg font-semibold text-foreground leading-tight">
-              Faculty of Accounting
+            <h1 className="text-base font-bold text-foreground leading-tight tracking-tight">
+              FACULTY OF ACCOUNTING
             </h1>
-            <p className="text-xs text-muted-foreground">& Informatics</p>
+            <p className="text-xs text-muted-foreground font-medium tracking-wide">& INFORMATICS</p>
           </div>
         </div>
 
