@@ -3,10 +3,11 @@ export interface Project {
   title: string;
   description: string;
   lab: string;
-  technologies: string[];
+  technologies?: string[];
   year: number;
   type: "student" | "staff";
   contributors: string;
+  sponsors?: string[];
 }
 
 export const projects: Project[] = [
@@ -14,7 +15,7 @@ export const projects: Project[] = [
     id: "proj-1",
     title: "Project-Based Learning Initiative",
     description: " A practical learning model designed by professors and the Financial Accounting Department to help students think creatively and develop innovative solutions for small businesses. Students work on real-world financial challenges to build entrepreneurial and analytical skills.",
-    lab: "Accountinhg Lab",
+    lab: "Accounting Lab",
     technologies: ["Python", "TensorFlow", "Pandas", "Flask", "React"],
     year: 2025,
     type: "student",
@@ -46,10 +47,11 @@ export const projects: Project[] = [
     title: "Community Engagement: The Men Carve Initiative",
     description: "A community-based project supporting a student-led feeding scheme. Students work closely with department staff to help community members with meal preparation, budgeting, and resource management.",
     lab: "Arm Lab",
-    technologies: ["Python"],
+    sponsors: ["SA Harvest", "DUT"],
     year: 2025,
     type: "student",
-    contributors: "Mr Zakhe Khuzwayo"
+    contributors: "Mr Zakhe Khuzwayo",
+    technologies: []
   },
   
 ];

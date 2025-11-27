@@ -76,16 +76,18 @@ const Projects = () => {
               </p>
 
               <div className="space-y-3">
-                <div>
-                  <h4 className="text-xs font-semibold text-foreground mb-2">Technologies</h4>
-                  <div className="flex flex-wrap gap-1.5">
-                    {project.technologies.map((tech, i) => (
-                      <Badge key={i} variant="outline" className="text-xs">
-                        {tech}
-                      </Badge>
-                    ))}
+                {project.technologies && project.technologies.length > 0 && (
+                  <div>
+                    <h4 className="text-xs font-semibold text-foreground mb-2">Technologies</h4>
+                    <div className="flex flex-wrap gap-1.5">
+                      {project.technologies.map((tech, i) => (
+                        <Badge key={i} variant="outline" className="text-xs">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
 
                 <div className="flex items-center gap-2 text-sm text-muted-foreground pt-2 border-t border-border">
                   <Users size={14} />
