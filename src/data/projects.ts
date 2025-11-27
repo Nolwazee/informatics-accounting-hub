@@ -14,7 +14,7 @@ export const projects: Project[] = [
     id: "proj-1",
     title: "Project-Based Learning Initiative",
     description: " A practical learning model designed by professors and the Financial Accounting Department to help students think creatively and develop innovative solutions for small businesses. Students work on real-world financial challenges to build entrepreneurial and analytical skills.",
-    lab: "Accountinhg Lab",
+    lab: "Accounting Lab",
     technologies: ["Python", "TensorFlow", "Pandas", "Flask", "React"],
     year: 2025,
     type: "student",
