@@ -2,7 +2,7 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  department: string;
+  lab: string;
   technologies: string[];
   year: number;
   type: "student" | "staff";
@@ -12,122 +12,44 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "proj-1",
-    title: "Automated Financial Statement Analyzer",
-    description: "An AI-powered tool that analyzes financial statements, detects anomalies, and provides insights on company financial health using machine learning algorithms.",
-    department: "financial-accounting",
+    title: "Project-Based Learning Initiative",
+    description: " A practical learning model designed by professors and the Financial Accounting Department to help students think creatively and develop innovative solutions for small businesses. Students work on real-world financial challenges to build entrepreneurial and analytical skills.",
+    lab: "Accountinhg Lab",
     technologies: ["Python", "TensorFlow", "Pandas", "Flask", "React"],
-    year: 2024,
-    type: "staff",
-    contributors: "Dr. Sarah Johnson, Prof. Michael Chen"
+    year: 2025,
+    type: "student",
+    contributors: "Mr. Ntando Majola , Ms. Busi Mzila, Ms. Zanele Zuma, "
   },
   {
     id: "proj-2",
-    title: "Tax Compliance Dashboard for SMEs",
-    description: "A user-friendly web application helping small and medium enterprises track tax obligations, deadlines, and generate compliance reports automatically.",
-    department: "auditing-taxation",
-    technologies: ["Vue.js", "Node.js", "PostgreSQL", "Chart.js"],
-    year: 2023,
+    title: "Revenue Anomaly Detection Using Machine Learning",
+    description: "A machine learning project that identifies unusual patterns, inconsistencies, and errors in financial statements. Students apply regression analysis and anomaly detection algorithms to help identify revenue irregularities and potential fraud.",
+    lab: "Moses Kotana Lab",
+    technologies: ["Python"],
+    year: 2025,
     type: "student",
-    contributors: "Emma Williams, James Brown"
+    contributors: "Mr. Ntando Majola , Ms. Busi Mzila, Ms. Zanele Zuma"
   },
   {
     id: "proj-3",
-    title: "Blockchain-Based Audit Trail System",
-    description: "Immutable ledger system for financial transactions ensuring transparency and reducing fraud in corporate environments.",
-    department: "auditing-taxation",
-    technologies: ["Ethereum", "Solidity", "Web3.js", "IPFS"],
-    year: 2024,
+    title: "Financial Statement Preparation Website for Public Schools",
+    description: "A web platform designed to help public schools prepare accurate financial statements. It simplifies reporting requirements and guides schools through proper financial documentation.",
+    lab: "4IR Lab of Excellence",
+    technologies: ["Python"],
+    year: 2025,
     type: "student",
-    contributors: "Alex Thompson, Maria Garcia"
+    contributors: "Ms. Yoliswa Mkhize, "
   },
-  {
-    id: "proj-4",
-    title: "Smart Campus IoT Network",
-    description: "Comprehensive IoT infrastructure monitoring environmental conditions, energy usage, and security across campus buildings with real-time analytics.",
-    department: "information-technology",
-    technologies: ["Arduino", "Raspberry Pi", "MQTT", "InfluxDB", "Grafana"],
-    year: 2024,
-    type: "staff",
-    contributors: "Dr. Robert Lee, Dr. Linda Martinez"
-  },
-  {
-    id: "proj-5",
-    title: "Healthcare Patient Management System",
-    description: "Cloud-based platform for managing patient records, appointment scheduling, and telemedicine consultations with end-to-end encryption.",
-    department: "information-technology",
-    technologies: ["React Native", "Firebase", "Node.js", "MongoDB"],
-    year: 2023,
-    type: "student",
-    contributors: "Sophia Anderson, David Wilson"
-  },
+  
   {
     id: "proj-6",
-    title: "Cybersecurity Threat Detection Framework",
-    description: "Machine learning-based system for real-time detection and response to network intrusions and cybersecurity threats.",
-    department: "information-technology",
-    technologies: ["Python", "Scikit-learn", "Wireshark", "Elasticsearch"],
-    year: 2024,
-    type: "staff",
-    contributors: "Prof. Emily Davis, Dr. Kevin White"
-  },
-  {
-    id: "proj-7",
-    title: "E-Commerce Recommendation Engine",
-    description: "Personalized product recommendation system using collaborative filtering and deep learning to enhance customer experience.",
-    department: "info-corporate-management",
-    technologies: ["Python", "TensorFlow", "Redis", "FastAPI", "React"],
-    year: 2024,
+    title: "Community Engagement: The Men Carve Initiative",
+    description: "A community-based project supporting a student-led feeding scheme. Students work closely with department staff to help community members with meal preparation, budgeting, and resource management.",
+    lab: "Arm Lab",
+    technologies: ["Python"],
+    year: 2025,
     type: "student",
-    contributors: "Olivia Taylor, Liam Moore"
+    contributors: "Mr Zakhe Khuzwayo"
   },
-  {
-    id: "proj-8",
-    title: "Digital Transformation Maturity Assessment Tool",
-    description: "Web-based assessment platform helping organizations evaluate their digital maturity and receive customized transformation roadmaps.",
-    department: "info-corporate-management",
-    technologies: ["Angular", "Spring Boot", "MySQL", "Docker"],
-    year: 2023,
-    type: "staff",
-    contributors: "Dr. Patricia Jackson, Prof. George Harris"
-  },
-  {
-    id: "proj-9",
-    title: "Supply Chain Optimization Platform",
-    description: "Analytics platform optimizing inventory management, logistics, and supplier relationships using data-driven insights.",
-    department: "management-accounting",
-    technologies: ["Power BI", "Azure", "Python", "SQL Server"],
-    year: 2024,
-    type: "student",
-    contributors: "Isabella Martin, Noah Clark"
-  },
-  {
-    id: "proj-10",
-    title: "Predictive Maintenance for Manufacturing",
-    description: "ML-based system predicting equipment failures and optimizing maintenance schedules to reduce downtime in manufacturing facilities.",
-    department: "finance-info-management",
-    technologies: ["Python", "Keras", "Apache Kafka", "Tableau"],
-    year: 2024,
-    type: "staff",
-    contributors: "Dr. Jessica Rodriguez, Dr. Daniel Lewis"
-  },
-  {
-    id: "proj-11",
-    title: "Social Media Sentiment Analysis Dashboard",
-    description: "Real-time analysis of social media sentiment for brands, tracking public opinion and identifying trending topics using NLP.",
-    department: "finance-info-management",
-    technologies: ["Python", "NLTK", "Spark", "Elasticsearch", "Kibana"],
-    year: 2023,
-    type: "student",
-    contributors: "Mia Walker, Ethan Hall"
-  },
-  {
-    id: "proj-12",
-    title: "Financial Fraud Detection System",
-    description: "Advanced anomaly detection system identifying fraudulent transactions in real-time using ensemble machine learning methods.",
-    department: "auditing-taxation",
-    technologies: ["Python", "XGBoost", "AWS", "PostgreSQL", "Streamlit"],
-    year: 2024,
-    type: "staff",
-    contributors: "Prof. Amanda Young, Dr. Christopher King"
-  }
+  
 ];

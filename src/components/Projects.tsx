@@ -4,14 +4,15 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { projects } from "@/data/projects";
 import { departments } from "@/data/departments";
+import { labs } from "@/data/labs";
 import { Users, Calendar } from "lucide-react";
 
 const Projects = () => {
-  const [selectedDept, setSelectedDept] = useState<string>("all");
+  const [selectedLab, setSelectedLab] = useState<string>("all");
 
-  const filteredProjects = selectedDept === "all" 
-    ? projects 
-    : projects.filter(p => p.department === selectedDept);
+  const filteredProjects = selectedLab === "all"
+    ? projects
+    : projects.filter(p => p.lab === selectedLab);
 
   return (
     <section id="projects" className="section-padding bg-background">
@@ -27,20 +28,20 @@ const Projects = () => {
           {/* Department Filter */}
           <div className="flex flex-wrap justify-center gap-3">
             <Button
-              variant={selectedDept === "all" ? "default" : "outline"}
-              onClick={() => setSelectedDept("all")}
-              className={selectedDept === "all" ? "bg-primary text-primary-foreground" : ""}
+              variant={selectedLab === "all" ? "default" : "outline"}
+              onClick={() => setSelectedLab("all")}
+              className={selectedLab === "all" ? "bg-primary text-primary-foreground" : ""}
             >
               All Projects
             </Button>
-            {departments.map(dept => (
+            {labs.map(lab => (
               <Button
-                key={dept.id}
-                variant={selectedDept === dept.id ? "default" : "outline"}
-                onClick={() => setSelectedDept(dept.id)}
-                className={selectedDept === dept.id ? "bg-primary text-primary-foreground" : ""}
+                key={lab.id}
+                variant={selectedLab === lab.id ? "default" : "outline"}
+                onClick={() => setSelectedLab(lab.id)}
+                className={selectedLab === lab.id ? "bg-primary text-primary-foreground" : ""}
               >
-                {dept.name.replace("Department of ", "")}
+                {lab.name}
               </Button>
             ))}
           </div>

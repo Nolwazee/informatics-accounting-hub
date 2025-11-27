@@ -17,6 +17,9 @@ const Hero = () => {
           <br />
           <span className="text-secondary">& Informatics</span>
         </h1>
+      <h2 className="text-lg md:text-2xl font-medium mb-6 leading-tight text-gray-700">
+       Engineering Practices Innovation Projects
+      </h2>
         <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed">
           Empowering future leaders through excellence in education, research, and innovation
         </p>

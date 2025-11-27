@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Youtube } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -65,47 +65,58 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-primary-foreground/80">
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="mt-1 flex-shrink-0" />
-                <span>123 University Drive, Campus City, UC 12345</span>
+                <span>7 Ritson Road, Berea, Ritson Campus, 4001</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={16} />
-                <span>+1 (555) 123-4567</span>
+                <span>+27 (31) 373-5597</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={16} />
-                <span>info@faculty-ai.edu</span>
+                <span>faiec@dut.ac.za</span>
               </li>
             </ul>
 
             {/* Social Links */}
             <div className="flex gap-3 mt-6">
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=100057091736380"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-secondary transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook size={18} />
               </a>
+              
               <a
-                href="#"
-                className="w-9 h-9 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-secondary transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter size={18} />
-              </a>
-              <a
-                href="#"
+                href="https://www.linkedin.com/in/dut-faculty-of-accounting-and-informatics-615799321/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-secondary transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={18} />
               </a>
               <a
-                href="#"
+                href="https://www.tiktok.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-secondary transition-colors"
-                aria-label="Instagram"
+                aria-label="TikTok"
               >
-                <Instagram size={18} />
+                <svg width="18" height="18" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                  <path d="M192 64v64a48 48 0 01-48-48v80a48 48 0 11-48-48 48 48 0 0148 48V88a80 80 0 1080 80V64h-32z" fill="currentColor" />
+                </svg>
+              </a>
+              <a
+                href="http://www.youtube.com/@DUTFacultyofAccoutningandInfo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-secondary transition-colors"
+                aria-label="YouTube"
+              >
+                <Youtube size={18} />
               </a>
             </div>
           </div>
