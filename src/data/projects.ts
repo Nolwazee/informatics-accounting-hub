@@ -45,7 +45,7 @@ export const projects: Project[] = [
     id: "proj-6",
     title: "Community Engagement: The Men Carve Initiative",
     description: "A community-based project supporting a student-led feeding scheme. Students work closely with department staff to help community members with meal preparation, budgeting, and resource management.",
-    lab: "Arm Lab" 
+    lab: "Arm Lab", 
     year: 2025,
     type: "student",
     contributors: "Mr Zakhe Khuzwayo"
