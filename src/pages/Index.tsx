@@ -4,20 +4,22 @@ import Overview from "@/components/Overview";
 import Departments from "@/components/Departments";
 import Labs from "@/components/Labs";
 import Projects from "@/components/Projects";
+import StudentClubs from "@/components/StudentClubs";
+import LabGallery from "@/components/LabGallery";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <Header />
       <main>
         <Hero />
         <Overview />
         <Departments />
         <Labs />
+        <LabGallery />
+        <StudentClubs />
         <Projects />
       </main>
-      <Footer />
     </div>
   );
 };

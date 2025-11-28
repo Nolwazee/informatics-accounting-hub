@@ -5,19 +5,23 @@ export interface Department {
   programmes: string[];
   researchAreas: string[];
   notableProjects: string[];
+  location: string;
+
 }
 
 export const departments: Department[] = [
   {
     id: "auditing-taxation",
     name: "Auditing and Taxation",
-    description: "The Auditing and Taxation department focuses on developing expertise in auditing standards, internal controls, tax legislation, and compliance. Students gain practical skills in financial statement auditing, tax planning, and advisory services for individuals and organizations.",
+    location: "Building A, Room 101",
+    description: "Focuses on auditing standards, internal controls, and tax legislation. Students gain practical skills in financial statement auditing, tax planning, and advisory services.",
     programmes: [
-      "Bachelor of Commerce in Auditing",
-      "Bachelor of Commerce in Taxation",
-      "Postgraduate Diploma in Auditing",
-      "Honours in Taxation",
-      "Master of Commerce in Auditing"
+      "Diploma in Internal Auditing",
+      "Diploma in Taxation ",
+      "Postgraduate Diploma in Internal Audit ",
+      "Advanced Diploma in Taxation ",
+      "Advanced Diploma in Internal Auditing ",
+      "Master of Accounting "
     ],
     researchAreas: [
       "Audit Quality and Independence",
@@ -35,13 +39,13 @@ export const departments: Department[] = [
   {
     id: "finance-info-management",
     name: "Finance and Information Management",
-    description: "This department integrates financial management principles with information systems to prepare students for careers in financial analysis, investment management, and financial information systems. The curriculum emphasizes data-driven financial decision-making and technology-enabled financial services.",
+    location: "Building A, Room 102",
+    description: "Combines financial management with information systems to prepare students for careers in financial analysis, investment management, and financial information systems, emphasizing data-driven decision-making.",
     programmes: [
-      "Bachelor of Commerce in Finance",
-      "Bachelor of Commerce in Financial Information Systems",
-      "Honours in Finance",
-      "Master of Finance",
-      "Postgraduate Diploma in Financial Management"
+      "Diploma in Accounting",
+      "Diploma in Business and Information Management",
+      "Advanced Diploma in Business and Information Management",
+      "Doctor of Philosophy in Business and Information Management"
     ],
     researchAreas: [
       "Financial Markets and Instruments",
@@ -59,7 +63,8 @@ export const departments: Department[] = [
   {
     id: "financial-accounting",
     name: "Financial Accounting",
-    description: "The Financial Accounting department provides comprehensive training in accounting principles, financial reporting standards, and corporate financial management. Students develop expertise in preparing and analyzing financial statements, understanding accounting regulations, and applying international financial reporting standards.",
+    location: "Building A, Room 102",
+    description: "Provides training in accounting principles and financial reporting. Students learn to prepare and analyze financial statements, apply accounting regulations, and follow international reporting standards.",
     programmes: [
       "Bachelor of Commerce in Financial Accounting",
       "Bachelor of Accounting Science",
@@ -83,7 +88,8 @@ export const departments: Department[] = [
   {
     id: "info-corporate-management",
     name: "Information and Corporate Management",
-    description: "This department bridges information technology and corporate management, focusing on strategic management, organizational behavior, and information systems for decision-making. Students learn to leverage technology for organizational effectiveness and strategic advantage.",
+    location: "Building A, Room 102",
+    description: "Bridges IT and corporate management, focusing on strategic management, organizational behaviour, and information systems for effective decision-making.",
     programmes: [
       "Bachelor of Commerce in Corporate Management",
       "Bachelor of Business Administration",
@@ -107,7 +113,8 @@ export const departments: Department[] = [
   {
     id: "information-technology",
     name: "Information Technology",
-    description: "The Information Technology department offers comprehensive training in software development, network administration, database management, and emerging technologies. Students gain hands-on experience in designing, implementing, and maintaining IT infrastructure and applications for modern organizations.",
+    location: "Building A, Room 102",
+    description: "Offers training in software development, network administration, and emerging technologies with hands-on experience in IT infrastructure and application development.",
     programmes: [
       "Bachelor of Science in Information Technology",
       "Bachelor of Science in Software Development",
@@ -128,10 +135,38 @@ export const departments: Department[] = [
       "AI-Powered Student Support Chatbot"
     ]
   },
+
+    {
+    id: "information-systems",
+    name: "Information Systems",
+    location: "Building A, Room 102",
+    description: "Focuses on using ICT to solve business problems, equipping students with skills in business analysis, information management, and technology solution design.",
+    programmes: [
+      "Diploma in ICT in Business Analysis",
+      "Bachelor of Information & Communications Technology (IoT) — Internet of Things specialization",
+      "Diploma in Library & Information Studies ",
+      "Master of Management Sciences in Library and Information Science",
+      "Doctor of Philosophy in Library and Information Science"
+    ],
+    researchAreas: [
+      "Business Analysis & Process Improvement",
+      "Digital Transformation & ICT Adoption",
+      "Inclusive & Accessible Technology",
+      "Internet of Things (IoT) Applications",
+      "ICT for Information Management"
+    ],
+    notableProjects: [
+      "Business Process Automation Tools",
+      "Digital Access & Inclusion Initiative",
+      "IoT Integration for Smart Business Systems"
+    ]
+  }, 
+
   {
     id: "management-accounting",
     name: "Management Accounting",
-    description: "The Management Accounting department focuses on providing financial information for internal decision-making, strategic planning, and performance management. Students learn cost accounting, budgeting, performance measurement, and strategic management accounting techniques essential for organizational success.",
+    location: "Building A, Room 102",
+    description: "Focuses on internal financial information for decision-making and performance management, teaching cost accounting, budgeting, and strategic management accounting techniques.",
     programmes: [
       "Bachelor of Commerce in Management Accounting",
       "Postgraduate Diploma in Management Accounting",
@@ -151,5 +186,5 @@ export const departments: Department[] = [
       "Cost Optimization Framework for Manufacturing",
       "Performance Dashboard Development"
     ]
-  }
+  }, 
 ];

@@ -10,7 +10,7 @@ const Labs = () => {
     <section id="labs" className="section-padding bg-background/20">
       <div className="container-custom">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Labs & Facilities</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Specialist Resources</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Hands-on laboratories supporting teaching and research across accounting and informatics disciplines.
           </p>

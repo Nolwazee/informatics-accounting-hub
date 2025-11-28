@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { departments } from "@/data/departments";
-import { GraduationCap, Microscope, Lightbulb } from "lucide-react";
+import { GraduationCap, Microscope, Lightbulb, MapPin } from "lucide-react";
 
 const Departments = () => {
   return (
@@ -28,9 +28,13 @@ const Departments = () => {
                   <GraduationCap className="text-primary" size={24} />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-semibold text-foreground mb-2">
+                  <h3 className="text-2xl font-semibold text-foreground mb-1">
                     {dept.name}
                   </h3>
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                    <MapPin size={14} />
+                    <span>{dept.location}</span>
+                  </div>
                   <p className="text-muted-foreground leading-relaxed">
                     {dept.description}
                   </p>

@@ -55,12 +55,20 @@ const Projects = () => {
               style={{ animationDelay: `${index * 0.05}s` }}
             >
               <div className="flex items-start justify-between mb-4">
-                <Badge 
-                  variant={project.type === "staff" ? "default" : "secondary"}
-                  className={project.type === "staff" ? "bg-primary text-primary-foreground" : ""}
-                >
-                  {project.type === "staff" ? "Research" : "Student"}
-                </Badge>
+                <div className="flex items-center gap-2">
+                  <Badge 
+                    variant={project.type === "staff" ? "default" : "secondary"}
+                    className={project.type === "staff" ? "bg-primary text-primary-foreground" : ""}
+                  >
+                    {project.type === "staff" ? "Research" : "Student"}
+                  </Badge>
+                  {project.department && (
+                    <Badge variant="outline" className="text-xs">
+                      {departments.find(d => d.id === project.department)?.name ?? project.department}
+                    </Badge>
+                  )}
+                </div>
+
                 <div className="flex items-center gap-1 text-muted-foreground">
                   <Calendar size={14} />
                   <span className="text-xs">{project.year}</span>
