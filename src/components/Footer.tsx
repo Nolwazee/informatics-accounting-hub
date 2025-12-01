@@ -52,10 +52,13 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-lg mb-4">Departments</h3>
             <ul className="space-y-2 text-sm text-primary-foreground/80">
-              <li>Accounting</li>
-              <li>Informatics</li>
-              <li>Business Information Systems</li>
-              <li>Data Science & Analytics</li>
+              <li>Auditing and Taxation</li>
+              <li>Finance and Information Management</li>
+              <li>Financial Accounting</li>
+              <li>Information and Corporate Management</li>
+              <li>Information Technology</li>
+              <li>Information Systems</li>
+              <li>Management Accounting</li>
             </ul>
           </div>
 

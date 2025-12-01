@@ -7,22 +7,22 @@ export interface Club {
 
 export const clubs: Club[] = [
   {
-    id: "coding-club",
-    name: "Coding & Robotics Club",
-    description: "Hands-on coding projects, hackathons and robotics workshops.",
-    contact: "coding@faculty.edu",
+    id: "Varsity-Genie",
+    name: "Varsity Genie",
+    description: "Varsity Genie helps students gain real-world project experience, improve employability, and earn valuable certifications that prepare them for industry.",
+    contact: "varsitygenie@dut.ac.za",
   },
   {
-    id: "finance-society",
-    name: "Finance Society",
-    description: "Guest speakers, investment challenges and student mentoring in finance.",
-    contact: "finance@faculty.edu",
+    id: "###",
+    name: "####",
+    description: "ASK TG",
+    contact: "## ##",
   },
   {
-    id: "data-club",
-    name: "Data Science Club",
-    description: "Workshops on analytics, machine learning and data visualisation.",
-    contact: "data@faculty.edu",
+    id: "the-men-carve",
+    name: "The Men Carve",
+    description: "The MenCarve supports students through food parcels and sanitary items, and hosts events that address important youth and community issues. They also visit schools and student residences to offer guidance and support.",
+    contact: "themencarve.@dut.ac.za",
   }
 ];
 

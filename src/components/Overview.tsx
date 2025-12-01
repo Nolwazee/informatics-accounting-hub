@@ -15,6 +15,22 @@ const Overview = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {/* Dean's Message -> moved to first and image on top */}
+          <Card className="p-8 card-hover border-border">
+            <div className="flex flex-col items-center text-center gap-6">
+              <img
+                src="/Olugbara.jpg"
+                alt="Dean"
+                className="w-36 h-36 md:w-48 md:h-48 rounded-lg object-cover shadow-md mx-auto"
+              />
+              <h3 className="text-2xl font-semibold mb-2 text-foreground">Dean's Message</h3>
+              <p className="text-muted-foreground leading-relaxed max-w-xl">
+                "Welcome to our faculty, where tradition meets innovation. We are committed to nurturing talent and shaping the future of accounting and information technology. Our programmes combine practical skills with research-led teaching to prepare graduates for the modern workplace."
+              </p>
+            </div>
+          </Card>
+
+          {/* Vision -> second */}
           <Card className="p-8 card-hover border-border">
             <div className="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center mb-6">
               <Eye className="text-secondary" size={28} />
@@ -25,6 +41,7 @@ const Overview = () => {
             </p>
           </Card>
 
+          {/* Mission -> third */}
           <Card className="p-8 card-hover border-border">
             <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
               <Target className="text-accent" size={28} />
@@ -32,27 +49,11 @@ const Overview = () => {
             <h3 className="text-2xl font-semibold mb-4 text-foreground">Mission</h3>
             <p className="text-muted-foreground leading-relaxed">
               Developing Adaptive and Transformative Leaders for a Smart Society Through:
-  </p>
-  <div className="text-muted-foreground leading-relaxed space-y-2 ml-4">
-    <p className="mb-2">• Excellence in Learning, Teaching and Assessment.</p>
-    <p className="mb-2">• Relevant Research and Creative Innovation.</p>
-    <p className="mb-2">• Collaboration and Entrepreneurship.</p>
-  </div>
-          </Card>
-
-          <Card className="p-8 card-hover border-border">
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
-              <img
-                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80"
-                alt="Dean"
-                className="w-36 h-36 md:w-48 md:h-48 rounded-lg object-cover shadow-md"
-              />
-              <div>
-                <h3 className="text-2xl font-semibold mb-4 text-foreground">Dean's Message</h3>
-                <p className="text-muted-foreground leading-relaxed max-w-xl">
-                  "Welcome to our faculty, where tradition meets innovation. We are committed to nurturing talent and shaping the future of accounting and information technology. Our programmes combine practical skills with research-led teaching to prepare graduates for the modern workplace."
-                </p>
-              </div>
+            </p>
+            <div className="text-muted-foreground leading-relaxed space-y-2 ml-4">
+              <p className="mb-2">• Excellence in Learning, Teaching and Assessment.</p>
+              <p className="mb-2">• Relevant Research and Creative Innovation.</p>
+              <p className="mb-2">• Collaboration and Entrepreneurship.</p>
             </div>
           </Card>
         </div>

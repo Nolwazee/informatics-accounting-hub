@@ -1,3 +1,5 @@
+import React from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import labs from "@/data/labs";
@@ -6,6 +8,46 @@ import { Monitor, Database, ShieldCheck, Cpu, Calculator, Box } from "lucide-rea
 const iconByIndex = [Monitor, Cpu, Database, ShieldCheck, Calculator, Box];
 
 const Labs = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // wait/poll helper
+  const waitFor = (id: string, timeout = 1500, interval = 100) =>
+    new Promise<boolean>((resolve) => {
+      const start = Date.now();
+      const check = () => {
+        if (document.getElementById(id)) {
+          resolve(true);
+          return;
+        }
+        if (Date.now() - start >= timeout) {
+          resolve(false);
+          return;
+        }
+        setTimeout(check, interval);
+      };
+      check();
+    });
+
+  const onGoToLab = async (labId: string) => {
+    const targetId = `lab-${labId}`;
+    // if we're not on index navigate there first
+    if (location.pathname !== "/") {
+      navigate("/");
+      const found = await waitFor(targetId, 2000, 120);
+      if (found) document.getElementById(targetId)!.scrollIntoView({ behavior: "smooth" });
+      return;
+    }
+    // if on index try immediate scroll, else poll
+    const el = document.getElementById(targetId);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+      return;
+    }
+    const found = await waitFor(targetId, 1200, 100);
+    if (found) document.getElementById(targetId)!.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section id="labs" className="section-padding bg-background/20">
       <div className="container-custom">
@@ -27,7 +69,7 @@ const Labs = () => {
                   </div>
                   <div>
                     <h3 className="text-2xl font-semibold text-foreground mb-1">{lab.name}</h3>
-                    <p className="text-sm text-muted-foreground">{lab.location} • In-charge: {lab.inCharge}</p>
+                    <p className="text-sm text-muted-foreground">{lab.location}</p>
                   </div>
                 </div>
 

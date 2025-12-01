@@ -1,16 +1,71 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const scrollToSection = (id: string) => {
+  const tryScroll = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      setIsMenuOpen(false);
+      return true;
+    }
+    return false;
+  };
+
+  // Waits up to `timeout` ms, polling every `interval` ms for element with `id`.
+  const waitForElementAndScroll = async (id: string, timeout = 1000, interval = 80) => {
+    const start = Date.now();
+    return new Promise<boolean>((resolve) => {
+      const check = () => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+          resolve(true);
+          return;
+        }
+        if (Date.now() - start >= timeout) {
+          resolve(false);
+          return;
+        }
+        setTimeout(check, interval);
+      };
+      check();
+    });
+  };
+
+  const scrollToSection = async (id: string) => {
+    setIsMenuOpen(false);
+
+    if (id === "home") {
+      if (location.pathname !== "/") {
+        navigate("/");
+        // wait for root to render then scroll to top
+        await new Promise((r) => setTimeout(r, 120));
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    // If we're already on index try immediate scroll or fallback to polling
+    if (location.pathname === "/") {
+      if (tryScroll(id)) return;
+      const found = await waitForElementAndScroll(id);
+      if (!found) console.warn(`No element with id="${id}" found to scroll to.`);
+      return;
+    }
+
+    // Not on index: navigate home then wait/poll for element
+    navigate("/");
+    const found = await waitForElementAndScroll(id, 1200, 100);
+    if (!found) {
+      console.warn(`No element with id="${id}" found to scroll to after navigation.`);
     }
   };
 
@@ -35,27 +90,14 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6">
-          <Link to="/" className="text-foreground hover:text-secondary transition-colors text-sm font-medium">Home</Link>
-          <Link to="/clubs" className="text-foreground hover:text-secondary transition-colors text-sm font-medium">Clubs</Link>
-          <Link to="/gallery" className="text-foreground hover:text-secondary transition-colors text-sm font-medium">Gallery</Link>
-          <button
-            onClick={() => scrollToSection("departments")}
-            className="text-foreground hover:text-secondary transition-colors text-sm font-medium"
-          >
-            Departments
-          </button>
-          <button
-            onClick={() => scrollToSection("projects")}
-            className="text-foreground hover:text-secondary transition-colors text-sm font-medium"
-          >
-            Projects
-          </button>
-          <Button
-            onClick={() => scrollToSection("contact")}
-            className="bg-secondary text-secondary-foreground hover:bg-secondary/90"
-          >
-            Contact Us
-          </Button>
+          <button onClick={() => scrollToSection("home")} className="text-foreground hover:text-secondary transition-colors text-sm font-medium">Home</button>
+          <button onClick={() => scrollToSection("overview")} className="text-foreground hover:text-secondary transition-colors text-sm font-medium">About</button>
+          <button onClick={() => scrollToSection("departments")} className="text-foreground hover:text-secondary transition-colors text-sm font-medium">Departments</button>
+          <button onClick={() => scrollToSection("labs")} className="text-foreground hover:text-secondary transition-colors text-sm font-medium">Labs</button>
+          <button onClick={() => scrollToSection("gallery")} className="text-foreground hover:text-secondary transition-colors text-sm font-medium">Gallery</button>
+          <button onClick={() => scrollToSection("projects")} className="text-foreground hover:text-secondary transition-colors text-sm font-medium">Projects</button>
+          <button onClick={() => scrollToSection("student-clubs")} className="text-foreground hover:text-secondary transition-colors text-sm font-medium">Clubs</button>
+          <Button onClick={() => scrollToSection("contact")} className="bg-secondary text-secondary-foreground hover:bg-secondary/90">Contact Us</Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -72,11 +114,13 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-background border-b border-border animate-fade-in">
           <div className="container-custom px-6 py-4 flex flex-col gap-4">
-            <Link to="/" onClick={() => setIsMenuOpen(false)} className="text-foreground hover:text-secondary transition-colors text-sm font-medium text-left">Home</Link>
-            <Link to="/clubs" onClick={() => setIsMenuOpen(false)} className="text-foreground hover:text-secondary transition-colors text-sm font-medium text-left">Clubs</Link>
-            <Link to="/gallery" onClick={() => setIsMenuOpen(false)} className="text-foreground hover:text-secondary transition-colors text-sm font-medium text-left">Gallery</Link>
+            <button onClick={() => { scrollToSection("home"); }} className="text-foreground hover:text-secondary transition-colors text-sm font-medium text-left">Home</button>
+            <button onClick={() => { scrollToSection("overview"); }} className="text-foreground hover:text-secondary transition-colors text-sm font-medium text-left">About</button>
             <button onClick={() => { scrollToSection("departments"); }} className="text-foreground hover:text-secondary transition-colors text-sm font-medium text-left">Departments</button>
+            <button onClick={() => { scrollToSection("labs"); }} className="text-foreground hover:text-secondary transition-colors text-sm font-medium text-left">Labs</button>
+            <button onClick={() => { scrollToSection("gallery"); }} className="text-foreground hover:text-secondary transition-colors text-sm font-medium text-left">Gallery</button>
             <button onClick={() => { scrollToSection("projects"); }} className="text-foreground hover:text-secondary transition-colors text-sm font-medium text-left">Projects</button>
+            <button onClick={() => { scrollToSection("student-clubs"); }} className="text-foreground hover:text-secondary transition-colors text-sm font-medium text-left">Clubs</button>
             <Button onClick={() => { scrollToSection("contact"); }} className="bg-secondary text-secondary-foreground hover:bg-secondary/90 w-full">Contact Us</Button>
           </div>
         </div>
