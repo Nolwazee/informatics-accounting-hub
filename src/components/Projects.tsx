@@ -85,14 +85,6 @@ const Projects = () => {
                 </p>
 
                 <div className="border-t border-border pt-3">
-                  <p className="text-xs text-muted-foreground mb-2">
-                    <span className="font-medium">Lab:</span> {proj.lab}
-                  </p>
-                  {proj.year && (
-                    <p className="text-xs text-muted-foreground mb-2">
-                      <span className="font-medium">Year:</span> {proj.year}
-                    </p>
-                  )}
                   {proj.contributors && (
                     <p className="text-xs text-muted-foreground">
                       <span className="font-medium">Contributors:</span> {proj.contributors}

@@ -1,7 +1,40 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { departments } from "@/data/departments";
-import { GraduationCap, Microscope, Lightbulb, MapPin } from "lucide-react";
+import { GraduationCap, Microscope, Lightbulb, MapPin, FileText, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import handbookData from "@/data/studentHandbook";
+import contactData from "@/data/facultyContacts";
+
+export interface StudentHandbook {
+  title: string;
+  description: string;
+  downloadUrl: string;
+  lastUpdated: string;
+}
+
+export const studentHandbook: StudentHandbook = {
+  title: "Student Handbook",
+  description: "Access the comprehensive student handbook for policies, procedures, and guidelines.",
+  downloadUrl: "/student-handbook.pdf",
+  lastUpdated: "2024-12-03"
+};
+
+export interface FacultyContact {
+  name: string;
+  email: string;
+  phone?: string;
+  position: string;
+}
+
+export const facultyContacts: FacultyContact[] = [
+  {
+    name: "Faculty Dean's Office",
+    email: "faculty@dut.ac.za",
+    phone: "+27 31 123 4567",
+    position: "Dean"
+  }
+];
 
 const Departments = () => {
   return (
@@ -87,6 +120,53 @@ const Departments = () => {
               </div>
             </Card>
           ))}
+
+          {/* Information Block - displays on the right side with departments */}
+          <div className="space-y-6">
+            <Card className="p-8 card-hover border-border bg-gradient-to-br from-primary/5 to-secondary/5">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <FileText className="text-primary" size={24} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">{handbookData.title}</h3>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    {handbookData.description}
+                  </p>
+                  <a href={handbookData.downloadUrl} target="_blank" rel="noopener noreferrer">
+                    <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                      Access Handbook
+                    </Button>
+                  </a>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-8 card-hover border-border bg-gradient-to-br from-secondary/5 to-accent/5">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Mail className="text-secondary" size={24} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Faculty Assistance</h3>
+                  <p className="text-sm text-muted-foreground mb-1">
+                    <span className="font-medium">{contactData.title}:</span> {contactData.name}
+                  </p>
+                  <p className="text-sm text-muted-foreground mb-1">
+                    <span className="font-medium">Tel:</span> {contactData.phone}
+                  </p>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    <span className="font-medium">Email:</span> {contactData.email}
+                  </p>
+                  <a href={`mailto:${contactData.email}`}>
+                    <Button variant="outline" className="w-full">
+                      Contact Faculty
+                    </Button>
+                  </a>
+                </div>
+              </div>
+            </Card>
+          </div>
         </div>
       </div>
     </section>

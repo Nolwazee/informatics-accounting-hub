@@ -75,9 +75,9 @@ const Header = () => {
         <div className="flex items-center gap-3">
           <div className="w-11 h-11 bg-primary rounded flex items-center justify-center shadow-md overflow-hidden">
             <img
-              src="https://via.placeholder.com/44x44.png?text=F"
+              src="/1723112855288.jpeg"
               alt="Faculty logo"
-              className="w-11 h-11 object-cover"
+              className="w-11 h-11 object-contain"
             />
           </div>
           <div>

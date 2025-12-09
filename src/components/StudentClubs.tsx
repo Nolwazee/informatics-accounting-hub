@@ -1,7 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import clubs from "@/data/clubs";
-import { Users } from "lucide-react";
 
 const StudentClubs = () => {
   return (
@@ -18,9 +17,11 @@ const StudentClubs = () => {
           {clubs.map((club) => (
             <Card key={club.id} className="p-6 card-hover">
               <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <Users className="text-primary" size={20} />
-                </div>
+                <img
+                  src={club.image}
+                  alt={club.name}
+                  className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                />
                 <div>
                   <h3 className="text-xl font-semibold text-foreground">{club.name}</h3>
                   <p className="text-sm text-muted-foreground">{club.description}</p>

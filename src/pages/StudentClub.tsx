@@ -5,22 +5,22 @@ import { Users } from "lucide-react";
 const StudentClub = () => {
   const clubs = [
     {
-      id: "coding-club",
-      name: "Coding & Robotics Club",
-      description: "Hands-on coding projects, hackathons and robotics workshops.",
-      contact: "coding@faculty.edu",
+      id: "varisty-genie",
+      name: "VarsityGenie",
+      description: "Varsity Genie helps students gain real-world project experience, improve employability, and earn valuable certifications that prepare them for industry.",
+      contact: "varsitygenie@dut.ac.za",
     },
     {
-      id: "finance-society",
+      id: "ACFE-DUT Student Chapter",
       name: "Finance Society",
       description: "Guest speakers, investment challenges and student mentoring in finance.",
       contact: "finance@faculty.edu",
     },
     {
-      id: "data-club",
-      name: "Data Science Club",
-      description: "Workshops on analytics, machine learning and data visualisation.",
-      contact: "data@faculty.edu",
+      id: "the-men-carve",
+      name: "The Men Carve",
+      description: "The MenCarve supports students through food parcels and sanitary items, and hosts events that address important youth and community issues. They also visit schools and student residences to offer guidance and support.",
+      contact: "mencarve@dut.ac.za",
     },
   ];
 

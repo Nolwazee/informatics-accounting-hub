@@ -34,7 +34,7 @@ export const labs: Lab[] = [
   {
    id: "accounting-center-of-excellence",
    name: "Accounting Center of Excellence",
-    description: " A specialized learning environment providing access to financial software, accounting tools, and business simulations that strengthen practical financial skills.",
+    description: " A high-tech training hub offering hands-on experience with advanced 4IR technologies, robotics, and engineering tools, empowering students with industry-ready technical and innovation skills.",
     location: "Building C, Room DC1124",
     equipment: ["Accounting software terminals", "Financial simulation tools", "financial calculators"],
   },
@@ -42,14 +42,14 @@ export const labs: Lab[] = [
   {
     id: "luban-nbiot-workshop",
     name: "Luban NBIOT Workshop",
-    description: "A high-capacity fabrication space featuring industrial-grade 3D printers designed for large-scale prototyping, product design, and advanced additive manufacturing projects.",
+    description: "A high-tech training hub offering hands-on experience with advanced 4IR technologies, robotics, and engineering tools, empowering students with industry-ready technical and innovation skills.",
     location: "Building B, Room 100",
     equipment: ["Large-format 3D printers", "material storage units", "CAD workstations"],
   }, 
   {
     id: "luban-additive-manufacturing-workshop",
     name: "Luban Additive Manufacturing Workshop",
-    description: "A high-capacity fabrication space featuring industrial-grade 3D printers designed for large-scale prototyping, product design, and advanced additive manufacturing projects.",
+    description: "A modern workshop equipped with advanced 3D printing and digital fabrication tools, enabling students to design, prototype, and produce innovative additive manufacturing solutions.",
     location: "Building B, Room 100",
     equipment: ["Large-format 3D printers", "material storage units", "CAD workstations"],
   },
@@ -57,14 +57,14 @@ export const labs: Lab[] = [
   {
     id: "immersive-space",
     name: "Immersive Space",
-    description: "A high-capacity fabrication space featuring industrial-grade 3D printers designed for large-scale prototyping, product design, and advanced additive manufacturing projects.",
+    description: "An interactive digital environment using VR and AR technologies to let students explore immersive simulations, enhance learning experiences, and experiment with virtual design and innovation.",
     location: "Building B, Room 100",
     equipment: ["Large-format 3D printers", "material storage units", "CAD workstations"],
   }, 
   {
     id: "icm-simulation-lab",
     name: "ICM Simulation Lab",
-    description: "A high-capacity fabrication space featuring industrial-grade 3D printers designed for large-scale prototyping, product design, and advanced additive manufacturing projects.",
+    description: "A specialized simulation environment that uses advanced modeling tools to help students analyze industrial processes, test system behaviour, and develop problem-solving skills in a controlled, realistic setting.",
     location: "Building B, Room 100",
     equipment: ["Large-format 3D printers", "material storage units", "CAD workstations"],
   }, 
@@ -72,7 +72,7 @@ export const labs: Lab[] = [
     {
     id: "brics-workshop",
     name: "BRICS Workshop",
-    description: "A high-capacity fabrication space featuring industrial-grade 3D printers designed for large-scale prototyping, product design, and advanced additive manufacturing projects.",
+    description: "A collaborative innovation space where students engage in technology, engineering, and research projects aligned with BRICS initiatives, promoting global skills development, teamwork, and advanced practical learning.",
     location: "Building B, Room 100",
     equipment: ["Large-format 3D printers", "material storage units", "CAD workstations"],
   }, 
